@@ -12,4 +12,6 @@ public class ApplicationDbContext : ApiAuthorizationDbContext<ApplicationUser>
         : base(options, operationalStoreOptions)
     {
     }
+
+    public DbSet<Todo> Todos => Set<Todo>();
 }

@@ -27,7 +27,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
-
+app.MapGet("/todoitems", async (ApplicationDbContext db) =>
+    await db.Todos.ToListAsync());
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

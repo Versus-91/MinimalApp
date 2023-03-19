@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MinimalApp.Controllers;
 
-[Authorize]
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
